@@ -10,17 +10,8 @@ characterGenerator - функция, которая выдергивает в н
 Верно ли понимаю? Просто я задаю массивы с возможными вариантами персонажей, но тогда Webpack ругается, я их закомментировал, и он отстал.
 
 
-
-
-
-
-
-
-export function start() {
-  let cells = document.querySelectorAll('.cell');
-  cells.forEach(item => {
-    item.addEventListener('click', () => {
-      console.log('попал');
-    })
-  });
-}
+3. Правильно ли я понимаю, что здесь опечятка?
+attackAfter = Math.max(attackBefore, attackBefore * (1.8 - life) / 100)
+и должно быть
+attackAfter = Math.max(attackBefore * (1.8 - life / 100))
+?

@@ -4,7 +4,6 @@
 import GamePlay from './GamePlay';
 import GameController from './GameController';
 import GameStateService from './GameStateService';
-import {start} from './generators';
 
 
 const gamePlay = new GamePlay();
@@ -14,3 +13,4 @@ const stateService = new GameStateService(localStorage);
 
 const gameCtrl = new GameController(gamePlay, stateService);
 gameCtrl.init();
+// gamePlay.redrawPositions();

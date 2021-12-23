@@ -1,4 +1,4 @@
-import Character from './character';
+import Character from './Character';
 
 export default class Vampire extends Character {
   constructor(name, type = 'Vampire') {

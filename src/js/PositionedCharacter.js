@@ -14,3 +14,4 @@ export default class PositionedCharacter {
     this.position = position;
   }
 }
+

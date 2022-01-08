@@ -1,21 +1,25 @@
 export function calcTileType(index, boardSize) {
   // TODO: write logic here
   // отображение элементов игрового поля
-  if (index === 0) {
+  let corner1 = 0;
+  let corner2 = boardSize - 1;
+  let corner3 = corner2 * boardSize;
+  let corner4 = (boardSize ** 2) - 1;
+  if (index === corner1) {
     return 'top-left';
-  } else if (index === 7) {
+  } else if (index === corner2) {
     return 'top-right';
-  } else if (index === 56) {
+  } else if (index === corner3) {
     return 'bottom-left';
-  } else if (index === 63) {
+  } else if (index === corner4) {
     return 'bottom-right';
-  } else if (index >= 1 && index <= 6) {
+  } else if (index > corner1 && index < corner2) {
     return 'top';
-  } else if (index >= 57 && index <= 62) {
+  } else if (index > corner3 && index < corner4) {
     return 'bottom';
-  } else if (index % 8 === 0) {
+  } else if (index % boardSize === 0) {
     return 'left';
-  } else if (index % 8 === 7) {
+  } else if (index % boardSize === corner2) {
     return 'right';
   } else {
     return 'center';
